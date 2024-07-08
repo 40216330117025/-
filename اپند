@@ -1,0 +1,10 @@
+def list():
+    l = []
+    k = 0
+    while True:
+        k = int(input())
+        if k == 5:
+           break
+        l.append(k)
+    print(l)
+list()
