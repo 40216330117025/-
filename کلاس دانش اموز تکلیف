@@ -1,0 +1,40 @@
+class Student:
+    def __init__(self, name, grade1, grade2, grade3):
+        self.name = name
+        self.grade1 = grade1
+        self.grade2 = grade2
+        self.grade3 = grade3
+
+    def calculate_gpa(self):
+        return (self.grade1 + self.grade2 + self.grade3) / 3
+
+    def is_conditional(self):
+        conditional_subjects = []
+        if self.grade1 < 10:
+            conditional_subjects.append("Subject 1")
+        if self.grade2 < 10:
+            conditional_subjects.append("Subject 2")
+        if self.grade3 < 10:
+            conditional_subjects.append("Subject 3")
+        
+        return conditional_subjects
+
+
+name = input("Enter student's name: ")
+grade1 = float(input("Enter grade for subject 1: "))
+grade2 = float(input("Enter grade for subject 2: "))
+grade3 = float(input("Enter grade for subject 3: "))
+
+
+student = Student(name, grade1, grade2, grade3)
+
+
+gpa = student.calculate_gpa()
+conditional_subjects = student.is_conditional()
+
+
+print("GPA: ", gpa)
+if conditional_subjects:
+    print("Conditional Subjects: ", ", ".join(conditional_subjects))
+else:
+    print("Not Conditional")
