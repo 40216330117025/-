@@ -1,0 +1,8 @@
+def create_list():
+    l = [0] * 10
+    for i in range(10):
+        k = int(input())
+        l[i] = k
+    print(l)
+
+create_list()
