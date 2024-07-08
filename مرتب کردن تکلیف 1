@@ -1,0 +1,14 @@
+def maxmin():
+    l = 3 * [0]
+    for i in range(3):
+        k = int(input())
+        l[i] = k
+    l.sort()
+    countmax = l.count(l[-1])
+    countmin = l.count(l[0])
+    print("max: " + str(l[-1]) + "\n" +
+          "count max: " + str(countmax) + "\n" +
+          "count min: " + str(countmin) + "\n" +
+          "min: " + str(l[0]))
+
+maxmin()
