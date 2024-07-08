@@ -1,0 +1,31 @@
+import math
+
+class Triangle:
+    def __init__(self, a, b, c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+
+    def is_triangle(self):
+        if (a+ b> c) and (a + c > b) and (c + b > a):
+            return True
+        else:
+            return False
+             
+
+
+    def area(self):
+        s = (self.a + self.b + self.c) / 2
+        return math.sqrt(s * (s - self.a) * (s - self.b) * (s - self.c))
+
+    def perimeter(self):
+        return self.a + self.b + self.c
+
+
+a = int(input("Enter the length of side 1: "))
+b = int(input("Enter the length of side 2: "))
+c = int(input("Enter the length of side 3: "))
+
+
+my_triangle = Triangle(a, b, c)
