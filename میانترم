@@ -1,0 +1,40 @@
+class Color:
+    def __init__(self, name):
+        self.name = name
+
+class ColorCombination:
+    def __init__(self, *colors):
+        self.colors = colors
+
+    def combine_colors(self):
+        combined = " + ".join(color.name for color in self.colors)
+        return combined
+
+class ColorPair(ColorCombination):
+    def __init__(self, color1, color2):
+        super().__init__(color1, color2)
+
+class ColorTriple(ColorCombination):
+    def __init__(self, color1, color2, color3):
+        super().__init__(color1, color2, color3)
+
+class ColorQuad(ColorCombination):
+    def __init__(self, color1, color2, color3, color4):
+        super().__init__(color1, color2, color3, color4)
+
+red = Color("Red")
+blue = Color("Blue")
+yellow = Color("Yellow")
+green = Color("Green")
+
+pair1 = ColorPair(red, blue)
+print("Combining Red and Blue:", pair1.combine_colors())
+
+pair2 = ColorPair(yellow, green)
+print("Combining Yellow and Green:", pair2.combine_colors())
+
+triple = ColorTriple(red, blue, yellow)
+print("Combining Red, Blue, and Yellow:", triple.combine_colors())
+
+quad = ColorQuad(blue, green, red, yellow)
+print("Combining Blue, Green, Red, and Yellow:", quad.combine_colors())
