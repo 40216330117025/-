@@ -1,0 +1,48 @@
+class cooler:
+
+    def __init__(self, volume, color, noise_hz, brand, kind):
+        self.volume= volume
+        self.color = color
+        self.noise_hz= noise_hz
+        self.brand= brand
+        self.type= kind
+
+#    def sorting(self,coolerlist):
+#        coolerlist = [volume]    
+#        for i in range(0,len(coolerlist)):  
+#            for j in range(len(coolerlist)-1):  
+#                if(coolerlist[j]>coolerlist[j+1]):   
+       
+#                   coolerlist[j],coolerlist[j+1] = coolerlist[j+1], coolerlist[j]  
+#        return coolerlist
+    def sort(self,coolerlist):
+        coolerlist = [volume]
+        coolerlist.sort()
+        return coolerlist
+    def checkcolor(self):
+        if color == 'white' or 'blue':
+            print("nice color homie")
+        else:
+            print("this color dosent exist")
+    def nosiehzcheck(self):
+        if noise_hz >= 100 :
+            print("omg")
+        else:
+            print("nice")
+    def brandcheck(self):
+        if brand == 
+    
+for i in range(20):
+    volume = int(input("enter your volume number: "))
+for i in range(2):
+    color = input("enter color blue or white? ")
+for i in range(2):
+     noise_hz = input("enter noise hz: ")
+for i in range(2):
+    brand = input("enter brand lg or green: ")
+for i in range(2):
+    kind = input("enter kind electric or watercooler: ")
+
+
+
+my_cooler = cooler(volume, color, noise_hz, brand,kind)
