@@ -1,1 +1,5 @@
-
+def tvf(n = int(input())):
+    for i in range(n):
+        k = tvfc(i)
+        if k == True:
+            print(i)
